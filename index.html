@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouth Emotion Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Background Video Layers -->
+    <div class="background-layer" style="--layer-index: 1;">
+        <video src="background1.mp4" autoplay loop muted playsinline></video>
+    </div>
+    <div class="background-layer" style="--layer-index: 2;">
+        <video src="background2.mp4" autoplay loop muted playsinline></video>
+    </div>
+    <div class="background-layer" style="--layer-index: 3;">
+        <video src="background3.mp4" autoplay loop muted playsinline></video>
+    </div>
+    <div class="background-layer" style="--layer-index: 4;">
+        <video src="background4.mp4" autoplay loop muted playsinline></video>
+    </div>
+
+    <!-- Animated Gradient Overlay -->
+    <div class="gradient-overlay"></div>
+
+    <!-- Main Content with Center Video -->
+    <div class="content-container">
+        <h1>Explore Mouth Emotions</h1>
+        <p>Dive into the symbolism, emotions, and anatomy of the mouth as a gateway to human expression.</p>
+
+        <!-- Center Video Element -->
+        <video class="center-video" src="center.mp4" autoplay loop muted playsinline></video>
+
+        <div class="nav-links">
+            <a href="symbolism.html">Symbolism</a>
+            <a href="emotions.html">Emotions</a>
+            <a href="anatomy.html">Anatomy</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

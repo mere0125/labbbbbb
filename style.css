@@ -1,0 +1,78 @@
+/* General Body Setup */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow-y: auto;
+    background-color: #0b0b0b;
+}
+
+/* Background Video Layers with Overlay */
+.background-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: calc(var(--layer-index) * -1);
+    opacity: 0.3; /* Base opacity for layering effect */
+    pointer-events: none;
+}
+
+/* Video inside each background layer */
+.background-layer video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5) contrast(1.2);
+    animation: backgroundFade 10s infinite alternate;
+}
+
+/* Gradient Overlay for Dynamic Effect */
+.gradient-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+    background: linear-gradient(135deg, rgba(255, 87, 51, 0.3), rgba(70, 130, 180, 0.3), rgba(255, 215, 0, 0.3));
+    background-size: 200% 200%;
+    animation: gradientShift 20s ease infinite;
+}
+
+/* Gradient Animation */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Fading Animation for Videos */
+@keyframes backgroundFade {
+    0% { opacity: 0.2; }
+    50% { opacity: 0.5; }
+    100% { opacity: 0.3; }
+}
+
+/* Content Container Styling */
+.content-container {
+    position: relative;
+    z-index: 5;
+    max-width: 800px;
+    padding: 40px;
+    text-align: center;
+    background: rgba(20, 20, 20, 0.85);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Other styling for center video, text, and animations remains unchanged */
